@@ -669,6 +669,7 @@ RegisterNUICallback('PayInvoice', function(data, cb)
         if CanPay then PhoneData.Invoices = Invoices end
         cb(CanPay)
     end, society, amount, invoiceId, senderCitizenId)
+	TriggerServerEvent('jim-payments:Tickets:Give', data)
     TriggerServerEvent('qb-phone:server:BillingEmail', data, true)
 end)
 
@@ -998,76 +999,6 @@ RegisterNUICallback('FetchVehicleScan', function(_, cb)
             cb(result)
         end, plate)
     end, plate)
-end)
-
-RegisterNUICallback('GetRaces', function(_, cb)
-    QBCore.Functions.TriggerCallback('qb-lapraces:server:GetListedRaces', function(Races)
-        cb(Races)
-    end)
-end)
-
-RegisterNUICallback('GetTrackData', function(data, cb)
-    QBCore.Functions.TriggerCallback('qb-lapraces:server:GetTrackData', function(TrackData, CreatorData)
-        TrackData.CreatorData = CreatorData
-        cb(TrackData)
-    end, data.RaceId)
-end)
-
-RegisterNUICallback('SetupRace', function(data, cb)
-    TriggerServerEvent('qb-lapraces:server:SetupRace', data.RaceId, tonumber(data.AmountOfLaps))
-    cb("ok")
-end)
-
-RegisterNUICallback('HasCreatedRace', function(_, cb)
-    QBCore.Functions.TriggerCallback('qb-lapraces:server:HasCreatedRace', function(HasCreated)
-        cb(HasCreated)
-    end)
-end)
-
-RegisterNUICallback('IsInRace', function(_, cb)
-    local InRace = exports['qb-lapraces']:IsInRace()
-    cb(InRace)
-end)
-
-RegisterNUICallback('IsAuthorizedToCreateRaces', function(data, cb)
-    QBCore.Functions.TriggerCallback('qb-lapraces:server:IsAuthorizedToCreateRaces', function(IsAuthorized, NameAvailable)
-        data = {
-            IsAuthorized = IsAuthorized,
-            IsBusy = exports['qb-lapraces']:IsInEditor(),
-            IsNameAvailable = NameAvailable,
-        }
-        cb(data)
-    end, data.TrackName)
-end)
-
-RegisterNUICallback('StartTrackEditor', function(data, cb)
-    TriggerServerEvent('qb-lapraces:server:CreateLapRace', data.TrackName)
-    cb("ok")
-end)
-
-RegisterNUICallback('GetRacingLeaderboards', function(_, cb)
-    QBCore.Functions.TriggerCallback('qb-lapraces:server:GetRacingLeaderboards', function(Races)
-        cb(Races)
-    end)
-end)
-
-RegisterNUICallback('RaceDistanceCheck', function(data, cb)
-    QBCore.Functions.TriggerCallback('qb-lapraces:server:GetRacingData', function(RaceData)
-        local ped = PlayerPedId()
-        local coords = GetEntityCoords(ped)
-        local checkpointcoords = RaceData.Checkpoints[1].coords
-        local dist = #(coords - vector3(checkpointcoords.x, checkpointcoords.y, checkpointcoords.z))
-        if dist <= 115.0 then
-            if data.Joined then
-                TriggerEvent('qb-lapraces:client:WaitingDistanceCheck')
-            end
-            cb(true)
-        else
-            QBCore.Functions.Notify('You\'re too far away from the race. GPS has been set to the race.', 'error', 5000)
-            SetNewWaypoint(checkpointcoords.x, checkpointcoords.y)
-            cb(false)
-        end
-    end, data.RaceId)
 end)
 
 RegisterNUICallback('IsBusyCheck', function(data, cb)
@@ -1545,19 +1476,6 @@ RegisterNetEvent('qb-phone:client:UpdateTweets', function(src, Tweets, NewTweetD
             Tweets = PhoneData.Tweets
         })
     end
-end)
-
-RegisterNetEvent('qb-phone:client:RaceNotify', function(message)
-    SendNUIMessage({
-        action = "PhoneNotification",
-        PhoneNotify = {
-            title = "Racing",
-            text = message,
-            icon = "fas fa-flag-checkered",
-            color = "#353b48",
-            timeout = 3500,
-        },
-    })
 end)
 
 RegisterNetEvent('qb-phone:client:AddRecentCall', function(data, time, type)
@@ -2076,12 +1994,6 @@ RegisterNetEvent('qb-phone:client:GiveContactDetails', function()
     else
         QBCore.Functions.Notify("No one nearby!", "error")
     end
-end)
-
-RegisterNetEvent('qb-phone:client:UpdateLapraces', function()
-    SendNUIMessage({
-        action = "UpdateRacingApp",
-    })
 end)
 
 RegisterNetEvent('qb-phone:client:GetMentioned', function(TweetMessage, AppAlerts)

@@ -77,9 +77,11 @@ Config.PhoneApplications = {
     },
     ["advert"] = {
         app = "advert",
-        color = "#ff8f1a",
+        color = "#ffc900",
+        color2 = "#f7c816",
         icon = "fas fa-bullhorn",
         tooltipText = "Advertisements",
+        style = "font-size: 2vh";
         job = false,
         blockedjobs = {},
         slot = 7,
@@ -92,7 +94,7 @@ Config.PhoneApplications = {
         tooltipText = "Bank",
         job = false,
         blockedjobs = {},
-        slot = 8,
+        slot = 7,
         Alerts = 0,
     },
     ["crypto"] = {
@@ -102,17 +104,7 @@ Config.PhoneApplications = {
         tooltipText = "Crypto",
         job = false,
         blockedjobs = {},
-        slot = 9,
-        Alerts = 0,
-    },
-    ["racing"] = {
-        app = "racing",
-        color = "#353b48",
-        icon = "fas fa-flag-checkered",
-        tooltipText = "Racing",
-        job = false,
-        blockedjobs = {},
-        slot = 10,
+        slot = 8,
         Alerts = 0,
     },
     ["houses"] = {
@@ -122,7 +114,7 @@ Config.PhoneApplications = {
         tooltipText = "Houses",
         job = false,
         blockedjobs = {},
-        slot = 11,
+        slot = 9,
         Alerts = 0,
     },
     ["meos"] = {
@@ -132,7 +124,7 @@ Config.PhoneApplications = {
         tooltipText = "MDT",
         job = "police",
         blockedjobs = {},
-        slot = 13,
+        slot = 20,
         Alerts = 0,
     },
     ["lawyers"] = {
@@ -143,7 +135,7 @@ Config.PhoneApplications = {
         tooltipPos = "bottom",
         job = false,
         blockedjobs = {},
-        slot = 12,
+        slot = 10,
         Alerts = 0,
     },
     ["gallery"] = {
@@ -154,7 +146,7 @@ Config.PhoneApplications = {
         tooltipPos = "bottom",
         job = false,
         blockedjobs = {},
-        slot = 16,
+        slot = 11,
         Alerts = 0,
     },
     ["camera"] = {
@@ -165,7 +157,7 @@ Config.PhoneApplications = {
         tooltipPos = "bottom",
         job = false,
         blockedjobs = {},
-        slot = 15,
+        slot = 12,
         Alerts = 0,
     },
 }

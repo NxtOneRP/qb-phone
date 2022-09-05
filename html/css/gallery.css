@@ -4,7 +4,8 @@
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background: rgb(26, 31, 38, 90%);
+    /* background: rgb(36, 36, 36); */
     overflow: hidden;
 }
 
@@ -12,11 +13,12 @@
     position: absolute;
     height: 9vh;
     width: 100%;
-    background-color: #000;
+    background-color: rgb(26, 31, 38);
     text-align: center;
     line-height: 12.5vh;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5vh;
 }
 
@@ -96,7 +98,8 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.4vh;
 }
 
@@ -119,7 +122,8 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.4vh;
 }
 
@@ -137,7 +141,8 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.4vh;
 }
 #delete-button:hover {
@@ -160,7 +165,8 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.4vh;
     background-color: #08a0e9;
 }
@@ -177,7 +183,8 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.4vh;
     background-color: #ff8f1a;
 }
@@ -198,7 +205,8 @@
     border-bottom: 2px solid #1da0f200;
     resize: none;
     transition: border-bottom 0.1s ease-in-out;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     padding: 0.87vh;
     font-size: 1.4vh;
     top: 12vh;

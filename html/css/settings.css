@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 .settings-app {
     display: none;
     height: 100%;
     width: 100%;
-    background: rgba(36, 36, 36, 90%);
+    /* background: rgba(36, 36, 36, 90%); */
+    background: rgb(26, 31, 38, 90%);
     overflow: hidden;
 }
 
 .settings-app-header {
     position: relative;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 3vh;
     text-align: center;
     top: 70px;
@@ -38,13 +41,14 @@
     height: 6vh;
     margin-bottom: 10px;
     color: white;
-    background: rgba(23, 23, 23, 90%);
+    /* background: rgb(45, 69, 90); rgba(14, 18, 22, 0.979)*/
+    background: rgb(45, 69, 90);
     left: 15px;
     box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
 }
 
 .settings-app-tab:hover {
-    background-color: #dc143c;
+    background-color: #0078e9;
     transition: .5s ease;
 }
 
@@ -52,7 +56,8 @@
     position: absolute;
     top: -2.5vh;
     height: 2.6vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5vh;
     border-bottom: 1px solid rgba(0, 0, 0, 0.17);
     width: 100%;
@@ -83,7 +88,8 @@
     left: 6.2vh;
     top: 1.2vh;
     font-size: 1.3vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .settings-tab-description {
@@ -91,7 +97,8 @@
     left: 6.2vh;
     top: 3.2vh;
     font-size: 1.2vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     color: white;
 }
 
@@ -103,7 +110,8 @@
     width: 100%;
     left: 0;
     right: 0;
-    background: rgb(36, 36, 36);
+    background: rgb(26, 31, 38, 90%);
+    /* background: rgb(36, 36, 36); */
 }
 
 .settings-profilepicture-tab {
@@ -114,7 +122,8 @@
     width: 100%;
     left: 0;
     right: 0;
-    background: rgb(36, 36, 36);
+    background: rgb(26, 31, 38, 90%);
+    /* background: rgb(36, 36, 36); */
 }
 
 .background-options {
@@ -131,13 +140,14 @@
     height: 6vh;
     margin-bottom: 10px;
     color: white;
-    background: rgba(23, 23, 23, 90%);
+    /* background: rgb(45, 69, 90); */
+    background: rgb(45, 69, 90);
     left: 15px;
     box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
 }
 
 .background-option:hover {
-    background-color: #dc143c;
+    background-color: #0078e9;
     transition: .5s ease;
 }
 
@@ -159,7 +169,8 @@
     font-size: 1vh;
     color: white;
     font-size: 1.3vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .background-option-description {
@@ -170,7 +181,8 @@
     font-size: 1vh;
     color: white;
     font-size: 1.1vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .background-option-current {
@@ -180,7 +192,8 @@
     text-align: center;
     font-size: 1.6vh;
     color: green;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .background-buttons {
@@ -198,13 +211,14 @@
     text-align: center;
     line-height: 4.7vh;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5vh;
     transition: .05s;
 }
 
 .background-button:hover {
-    border-top: .3vh solid #dc143c;
+    border-top: .3vh solid #0078e9;
 }
 
 .background-custom {
@@ -212,7 +226,8 @@
     position: absolute;
     height: 40%;
     width: 80%;
-    background-color: rgb(245, 245, 245);
+    /* background-color: rgb(245, 245, 245); */
+    background: rgb(48, 71, 93);
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.247);
     margin: 0 auto;
     left: 0;
@@ -223,8 +238,10 @@
 }
 
 .background-custom-title {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     padding: 2vh;
+    color: white;
     font-size: 1.5vh;
     text-align: center;
 }
@@ -237,8 +254,10 @@
     outline: none;
     height: 3.5vh;
     width: 21vh;
-    font-family: 'Poppins', sans-serif;
-    background: rgb(235, 235, 235);
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    /* background: rgb(235, 235, 235); */
+    background: rgb(26, 31, 38, 90%);
     border-radius: 2vh;
     text-align: center;
 }
@@ -261,8 +280,9 @@
     width: 50%;
     text-align: center;
     line-height: 4.1vh;
-    color: black;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5vh;
     transition: .08s;
     border-bottom: 2px solid #e8421800;
@@ -270,7 +290,7 @@
 
 .custom-background-button:hover {
     font-weight: bolder;
-    color: #DC143C;
+    color: #0078e9;
 }
 
 
@@ -288,7 +308,8 @@
     height: 6vh;
     margin-bottom: 10px;
     color: white;
-    background: rgba(23, 23, 23, 90%);
+    /* background: rgb(45, 69, 90); */
+    background: rgb(45, 69, 90);
     left: 15px;
     box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
 }
@@ -311,7 +332,8 @@
     font-size: 1vh;
     color: white;
     font-size: 1.3vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .profilepicture-option-description {
@@ -322,7 +344,8 @@
     font-size: 1vh;
     color: white;
     font-size: 1.1vh;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .profilepicture-option-current {
@@ -332,7 +355,8 @@
     text-align: center;
     font-size: 1.6vh;
     color: green;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .profilepicture-buttons {
@@ -350,12 +374,13 @@
     text-align: center;
     line-height: 4.7vh;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5vh;
 }
 
 .profilepicture-button:hover {
-    border-top: .3vh solid #dc143c;
+    border-top: .3vh solid #0078e9;
 }
 
 .profilepicture-custom {
@@ -363,7 +388,8 @@
     position: absolute;
     height: 40%;
     width: 80%;
-    background-color: rgb(245, 245, 245);
+    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(48, 71, 93);
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.247);
     margin: 0 auto;
     left: 0;
@@ -374,7 +400,9 @@
 }
 
 .profilepicture-custom-title {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    color: white;
     padding: 2vh;
     font-size: 1.5vh;
     text-align: center;
@@ -387,7 +415,9 @@
     outline: none;
     height: 3.5vh;
     width: 21vh;
-    font-family: 'Poppins', sans-serif;
+    background: rgb(26, 31, 38, 90%);
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     border-radius: 2vh;
     text-align: center;
 }
@@ -410,8 +440,9 @@
     width: 50%;
     text-align: center;
     line-height: 4.1vh;
-    color: black;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5vh;
     transition: .08s;
     border-bottom: 2px solid #e8421800;
@@ -419,7 +450,7 @@
 
 .custom-profilepicture-button:hover {
     font-weight: bolder;
-    color: #DC143C;
+    color: #0078e9;
 }
 
 /* The switch - the box around the slider */
